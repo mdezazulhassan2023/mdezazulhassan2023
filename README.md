@@ -1,2 +1,2 @@
 #mdezazulhassan2023
-Web Developer| Md Ezazul Hassan
+Web Developer | Md Ezazul Hassan
