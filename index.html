@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff5c5c">
+  <title>Web Developer | Md Ezazul Hassan</title>
+  
+  <style>
+  html
+  {
+    font-size: 90%;
+  /*  color-sheme: dark;*/
+    scroll-behavior: smooth;
+  }
+   :root
+   {
+     --primary-color: #ff5c5c;
+    --light: hsl(0, 0%, 100%);
+    --dark: hsl(0, 0%, 0%);
+    --gray: hsl(0, 0%, 90%);
+   }
+  *
+  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    accent-color: var(--primary-color);
+    -webkit-accent-color: var(--primary-color);
+  }
+   body
+   {
+     background: 
+         var(--light)
+     ;
+     color: var(--dark);
+     font-family: tahoma;
+     font-size: 1.4rem;
+     min-height: 100dvh;
+     font-family: tahoma;
+     display: flex;
+     place-content: center;
+    padding-inline: 2rem;
+     position: relative;
+   }
+   body.active
+   {
+    --light: hsl(0, 0%, 0%);
+    --dark: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 10%);
+   }
+  nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    --width: 6rem;
+    --height: var(--width);
+    display: grid:
+    grid-template-column: repeat(autofit, 1fr);
+    background: var(--dark);
+    justify-content: space-evenly;
+    height: calc(var(--height) - 0.2rem);
+    border-radius: calc(var(--width)/2);
+  }
+  button,
+  input
+  {
+    width: var(--width);
+    height: var(--height);
+    border-radius: 50%;
+    overflow: hidden;
+    border: .5em solid var(--light);
+    transition: transform .4s;
+    position: absolute;
+    bottom: -0.1em;
+  }
+  input{ 
+    background: var(--primary-color);
+    color: var(--dark);
+    left: var(--width);
+  }
+  button{
+    background: 
+         var(--dark)
+     ;
+    color: var(--light);
+    right: var(--width);
+  }
+  button:hover,
+  input:hover{
+    transform: translateY(-50%);
+  }
+  </style>
+</head>
+<body>
+  <h1 id="heading"> </h1>
+  
+  <nav>
+    <button id="theme">theme</button>
+    <input type="color" id="input-color" value="#ff5c5c" />
+  </nav>
+
+	<script>
+    let all = document.querySelector('*');
+    const root = document.documentElement;
+    const head = document.head;
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  
+    const body = document.body;
+    const theme = document.getElementById('theme');
+  
+   let date = new Date();
+			let time = date.getHours();
+			  
+    theme.addEventListener('click', () =>{
+      body.classList.toggle('active');
+      if(body.classList.contains('active')){
+        localStorage.setItem('theme', body.classList);
+      }else{
+        localStorage.removeItem('theme', body.classList);
+      }
+    });
+   if (localStorage.theme) {
+     body.classList = localStorage.theme;
+   }
+     
+   let heading = document.getElementById('heading');
+			 
+   
+   let inputColor = document.getElementById('input-color');
+  
+   if(localStorage.primaryColor) {
+  inputColor.value = localStorage.primaryColor;
+  primaryColor = localStorage.primaryColor;
+  }
+  
+ setInterval( () => { 
+   let primaryColor = inputColor.value;
+   localStorage.setItem('primaryColor', primaryColor);
+   
+   metaThemeColor.content = primaryColor;
+   root.style = '--primary-color:' + primaryColor + ';';
+   all.style =' --primary-color: ' + primaryColor + ';';
+
+     
+   // heading.innerText = Math.ceil(pageYOffset);
+    //heading.innerText = Math.ceil(screenTop);
+    //heading.innerText = Math.ceil(screenY);
+    //heading.innerText = Math.ceil(scrollY);
+    //heading.innerText = Math.ceil(length);
+    //heading.innerText = name;
+   
+   
+    heading.innerText = localStorage.primaryColor;
+   
+  }, 1);
+
+  
+  </script>
+</body>
+</html>
