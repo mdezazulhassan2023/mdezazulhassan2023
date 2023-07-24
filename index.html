@@ -62,6 +62,10 @@
      place-content: center;
     padding-inline: 2rem;
      position: relative;
+	   
+     overflow: hidden;
+     align-items: center;
+     justify-content: center;
    }
    body.active
    {
@@ -111,10 +115,22 @@
   input:hover{
     transform: translateY(-50%);
   }
+  	  
+  video{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    max-width: 1440px;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+  }
   </style>
 </head>
 <body>
-  <h1 id="heading"> </h1>
+  
+  <video src="mdezazulhassan2023.mp4" autoplay loop muted=""></video>
+  
   
   <nav>
     <button id="theme">theme</button>
