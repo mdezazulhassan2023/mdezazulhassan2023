@@ -2,7 +2,26 @@
 
 <html>
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+
+
+
+	
+	
+
+  	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="theme-color" content="red">
+  
+
+
+	  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -47,182 +66,572 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3238054695616910"
      crossorigin="anonymous"></script>
 
+	
 
-	
-	
-  <meta name="theme-color" content="#7e47ff">
-  <title>Web Developer | Md Ezazul Hassan</title>
-  
-  <style>
-  html
-  {
-    font-size: 90%;
-  color-sheme: light;
-    scroll-behavior: smooth;
-  }
-   :root
-   {
-     --primary-color: #7e47ff;
-    --light: hsl(0, 0%, 100%);
-    --dark: hsl(0, 0%, 0%);
-    --gray: hsl(0, 0%, 90%);
-   }
-  *
-  {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     
-    accent-color: var(--primary-color);
-    -webkit-accent-color: var(--primary-color);
-  }
-   body
-   {
-     background: 
-         var(--primary-color)
-     ;
-     color: var(--dark);
-     font-family: tahoma;
-     font-size: 1.4rem;
-     height: 100dvh;
-     font-family: tahoma;
-     display: flex;
-     place-content: center;
-    padding-inline: 2rem;
-     position: relative;
-	   
-     overflow: hidden;
-     align-items: center;
-     justify-content: center;
-   }
-   body.active
-   {
-    --light: hsl(0, 0%, 0%);
-    --dark: hsl(0, 0%, 100%);
-    --gray: hsl(0, 0%, 10%);
-   }
-  nav{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    --width: 6rem;
-    --height: var(--width);
-    display: grid:
-    grid-template-column: repeat(autofit, 1fr);
-    background: var(--light);
-    justify-content: space-evenly;
-    height: calc(var(--height) - 0.2rem);
-    border-radius: calc(var(--width)/2);
-  }
-  button,
-  input
-  {
-    width: var(--width);
-    height: var(--height);
-    border-radius: 50%;
-    overflow: hidden;
-    border: .5em solid var(--light);
-    transition: transform .4s;
-    position: absolute;
-    bottom: -0.1em;
-  }
-  input{ 
-    background: var(--primary-color);
-    color: var(--dark);
-    left: var(--width);
-  }
-  button{
-    background: 
-         var(--dark)
-     ;
-    color: var(--light);
-    right: var(--width);
-  }
-  button:hover,
-  input:hover{
-    transform: translateY(-50%);
-  }
-  	  
-  video{
-    display: block;
-    position: absolute;
-    top: 0;
-    
-    max-width: 1440px;
-    margin-inline: auto;
-    aspect-ratio: 16 / 9;
-	  display: none;
-  }
-	  
-  </style>
+      <link rel="shortcut icon" href="mdezazulhassan2023-logo.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="https://web.facebook.com/photo/?fbid=214193474910171&set=a.110946551901531" type="image/x-icon"> -->
+    <title>Web Developer | Md Ezazul Hassan</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  
-  <video src="mdezazulhassan2023.mp4" autoplay loop muted></video>
-  
-	
-  <nav>
-    <button id="theme">theme</button>
-    <input type="color" id="input-color" value="#7e47ff" />
-  </nav>
+<body class="grid">
 
-	<script>
-    let all = document.querySelector('*');
-    const root = document.documentElement;
-    const head = document.head;
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-  
-    const body = document.body;
-    const theme = document.getElementById('theme');
-  
-   let date = new Date();
-			let time = date.getHours();
-			  
-    theme.addEventListener('click', () =>{
-      body.classList.toggle('active');
-      if(body.classList.contains('active')){
-        localStorage.setItem('theme', body.classList);
-      }else{
-        localStorage.removeItem('theme', body.classList);
-      }
-    });
-   if (localStorage.theme) {
-     body.classList = localStorage.theme;
-   }
-     
-   let heading = document.getElementById('heading');
-			 
-   
-   let inputColor = document.getElementById('input-color');
-  
-   if(localStorage.primaryColor) {
-  inputColor.value = localStorage.primaryColor;
-  primaryColor = localStorage.primaryColor;
-  }
-  
- setInterval( () => { 
-   let primaryColor = inputColor.value;
-   localStorage.setItem('primaryColor', primaryColor);
-   
-   metaThemeColor.content = primaryColor;
-   root.style = '--primary-color:' + primaryColor + ';';
-   all.style =' --primary-color: ' + primaryColor + ';';
+    <!-- header -->
+    <header id="header">
+        <section class="flex">
+            <div class="left_section flex">
+                <span>
+                    <!-- <span class="clip_text">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>  -->
+                    +880 16028 73384
+                </span>
+                <span class="lowercase">
+                    <!-- <span class="clip_text">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>  -->
+                    mdezazulhassan2023@gmail.com
+                </span>
+            </div>
+            <ul class="right_section flex">
+                <li><a class="link flex" href="http://facebook.com/mdezazulhassan2023" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a class="link flex" href="http://instagram.com/mdezazulhassan2023" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="link flex" href="http://twitter.com/mdezazulhassan2023" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </section>
+    </header>
 
-     
-   // heading.innerText = Math.ceil(pageYOffset);
-    //heading.innerText = Math.ceil(screenTop);
-    //heading.innerText = Math.ceil(screenY);
-    //heading.innerText = Math.ceil(scrollY);
-    //heading.innerText = Math.ceil(length);
-    //heading.innerText = name;
-   
-   
-    heading.innerText = localStorage.primaryColor;
-   
-  }, 1);
+    <!-- nav -->
+    <nav id="nav">
+        <section>
+            <section class="content flex">
+                <div class="logo flex no-wrap">
+                    <img src="mdezazulhassan2023-logo.png" alt="web developer | md ezazul hassan">
+                    <p class="flex no-wrap">md ezazul hassan</p>
+                </div>
+                <div class="navbar flex">
+                    <ul>
+                        <li class="active">
+                            <a href="#hero">
+                                <!-- <i class="fa-solid fa-house"></i> -->
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects">
+                                <!-- <i class="fa-solid fa-code"></i>  -->
+                                projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#pricing">
+                            <!-- <i class="fa-solid fa-credit-card"></i> -->
+                             pricing</a>
+                        </li>
+                        <li>
+                            <a href="#map_section">
+                                <!-- <i class="fa-solid fa-circle-user"></i>  -->
+                                contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </nav>
 
-  
-  </script>
+    <main class="grid">
+        <!-- hero -->
+    <div class="hero container scroller flex-col"
+    id="hero">
+        <div class="background">
+            <h1 class="slide-left">
+                <span>e</span>
+                <span>z</span>
+                <span>a</span>
+                <span>z</span>
+                <span>u</span>
+                <span>l</span>
+            </h1>
+            <h1 class="slide-right">
+                <span>h</span>
+                <span>a</span>
+                <span>s</span>
+                <span>s</span>
+                <span>a</span>
+                <span>n</span>
+            </h1>
+        </div>
+
+        <img class="midground" src="mdezazulhassan2023.png" alt="web developer | md ezazul hassan">
+        
+        <div class="foreground">
+            <h1 class="hzindex slide-left">
+                <span>e</span>
+                <span>z</span>
+                <span>a</span>
+                <span>z</span>
+                <span>u</span>
+                <span>l</span>
+            </h1>
+            <h1 class="slide-right">
+                <span>h</span>
+                <span>a</span>
+                <span>s</span>
+                <span>s</span>
+                <span>a</span>
+                <span>n</span>
+            </h1>
+        </div>
+
+        <div class="flex-col bio-data glass">
+            <div class="flex" id="typing">
+                <p class="title">designer . developer . youtuber</p>
+                <span id="typing-indecator">|</span>
+            </div>
+            <p class="pragraph">hi i'm 'web developer | md ezazul hassan' & i'm a freelancer has developed products & brands for start ups all around the world. today i'm a professional developer.</p>
+            <p class="pragraph">do you have any project? or want a website? or need a developer? hire me now!</p>
+            <div class="flex hire-me neumo-in">
+                <input
+                type="email" name="email"
+                id="email"
+                placeholder="abc@gmail.com"
+                pattern="[A-Za-z0-9]"
+                autocomplete="email"
+                class="neumo-in">
+
+                <input
+                type="text"
+                name="zip" id="zip"
+                pattern="[0-9]{4}"
+                placeholder="7440"
+                autocomplete="postal-code"
+                class="neumo-in">
+                <button class="primary-button clay-out" type="submit"><a href="mailto:mdezazulhassan2023@gmail.com">hire me ↗</a></button>
+            </div>
+        </div>
+    </div>
+
+        <!-- tasks -->
+    <div class="my-tasks container flex-col">
+        <div class="heading-section flex-col">
+            <h1>my tasks</h1>
+            <p>Its Important To Manage Time & Task</p>
+        </div>
+        
+        <div class="tasks-bottom grid">
+            <div class="left shadow flex-col scroller">
+                <h3 class="top flex">tasks : day
+                    <span id="dayes">_</span>
+                </h3>
+                <div class="bottom flex">
+                    <ul class="left grid">
+                        <li class="flex">
+                            <span></span>
+                            <span>6:00</span>
+                        </li>
+                        <li class="flex">
+                            <span></span>
+                            <span>9:00</span>
+                        </li>
+                        <li class="flex">
+                            <span></span>
+                            <span>6:00</span>
+                        </li>
+                        <li class="flex">
+                            <span></span>
+                            <span>9:00</span>
+                        </li>
+                    </ul>
+                    <ul class="right grid">
+                        <li class="flex shadow">Send The Documents To The Client
+                        </li>
+                        <li class="flex shadow">Get The Wireframes As Soon As Possible
+                        </li>
+                        <li class="flex shadow">Make A Draft Design And Send It To Review
+                        </li>
+                        <li class="flex shadow">Start Developement Discussing With Design Team
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="left shadow flex-col scroller">
+                <h3 class="top flex">2021 -
+                    <span id="years">_</span>
+                </h3>
+                <div class="bottom flex">
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+        <!-- clients -->
+    <div class="clients container flex-col">
+        <div class="heading-section flex-col">
+            <h1>clients</h1>
+            <p>I've Been Working With Teams Around The World.</p>
+        </div>
+        <div class="bottom grid">
+            <div class="left clients-container scroller">
+                <div class="clients-col clients-col-0">
+                    <div class="client glass client-0">git</div>
+                    <div class="clients-1-2">
+                        <div class="client glass client-1">lenevo</div>
+                        <div class="client glass client-2">apple</div>
+                    </div>
+                </div>
+                <div class="clients-col clients-col-1">
+                    <div class="client glass client-3">google</div>
+                    <div class="client glass client-4">microsoft</div>
+                    <div class="client glass client-5">facebook</div>
+                </div>
+                <div class="clients-col clients-col-2">
+                    <div class="clients-6-7">
+                        <div class="client glass client-6">youToube</div>
+                        <div class="client glass client-7">pinterest</div>
+                    </div>
+                    <div class="client glass client-8">hp</div>
+                </div>
+            </div>
+
+            <div class="right flex-col scroller">
+                <div class="style-box-bg"></div>
+                <img src="mdezazulhassan2023.png" alt="web developer | md ezazul hassan">
+                <div class="glass flex-col">
+                    <h3>md ezazul hassan</h3>
+                    <h4>ceo & project manager</h4>
+                    <p>previously at work</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+         
+        <!-- project -->
+    <div class="my-projects container flex-col" id="projects">
+        <div class="heading-section flex-col">
+            <h1>my Projects</h1>
+            <p>my Work Is The Bridge To Various Insightful Digital Experiences.</p>
+        </div>
+        <div class="bottom grid">
+            <div class="flex-col shadow scroller">
+                <iframe class="video shadow"
+                width=""
+                height=""
+                src="https://www.youtube.com/embed/lSnsG7wQoAE?controls=0" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; muted">
+                </iframe>
+                <h4>web developer | md ezazul hassan</h4>
+                <p>web developer | md ezazul hassan on youtube</p>
+            </div>
+
+            <div class="flex-col shadow scroller">
+                <iframe class="video shadow" 
+                width="" 
+                height=""
+                src="https://www.youtube.com/embed/6L-lgvFVRJ8?controls=0" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; muted">
+                </iframe>
+                <h4>web developer | md ezazul hassan</h4>
+                <p>web developer | md ezazul hassan on youtube</p>
+            </div>
+            
+        </div>
+    </div>
+        
+        <!-- pricing -->
+    <div class="demo-pricie container scroller flex-col" id="pricing">
+        <div class="heading-section flex-col">
+            <h1>Demo Price</h1>
+            <p>Select One, Pay For Your Service</p>
+        </div>
+        <div class="bottom cards">
+
+            <div class="card-box neumo-in">
+                <div class="card glass flex-col">
+                    <div class="top flex-col">
+                        <h4>basic</h4>
+                        <h3>free</h3>
+                        <h5>per year</h5>
+                        <p>Standard Listing Submission, Active For 7 days</p>
+                    </div>
+                    <ul class="middle flex-col">
+                        <li>✓ All Operating Supported</li>
+                        <li>✓ Great Interface</li>
+                        <li>Allows Encryption</li>
+                        <li>Face Recognized System</li>
+                        <li>24/7 Full Support</li>
+                    </ul>
+                    <div class="bottom flex">
+                        <button class="secondary-button" type="submit">get started</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-box neumo-in">
+                <div class="card glass flex-col">
+                    <div class="top flex-col">
+                        <h4>basic</h4>
+                        <h3>free</h3>
+                        <h5>per year</h5>
+                        <p>Standard Listing Submission, Active For 7 days</p>
+                    </div>
+                    <ul class="middle flex-col">
+                        <li>✓ All Operating Supported</li>
+                        <li>✓ Great Interface</li>
+                        <li>Allows Encryption</li>
+                        <li>Face Recognized System</li>
+                        <li>24/7 Full Support</li>
+                    </ul>
+                    <div class="bottom flex">
+                        <button class="primary-button" type="submit">get started</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-box neumo-in">
+                <div class="card glass flex-col">
+                    <div class="top flex-col">
+                        <h4>basic</h4>
+                        <h3>free</h3>
+                        <h5>per year</h5>
+                        <p>Standard Listing Submission, Active For 7 days</p>
+                    </div>
+                    <ul class="middle flex-col">
+                        <li>✓ All Operating Supported</li>
+                        <li>✓ Great Interface</li>
+                        <li>Allows Encryption</li>
+                        <li>Face Recognized System</li>
+                        <li>24/7 Full Support</li>
+                    </ul>
+                    <div class="bottom flex">
+                        <button class="secondary-button" type="submit">get started</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        <!-- cards -->
+    <div class="my-cards container scroller flex-col">
+        <div class="heading-section flex-col">
+            <h1>My Cards</h1>
+            <p>My All Useable Cards</p>
+        </div>
+        <div class="bottom grid">
+            <div class="glass flex flex-nowrap">
+                <div class="left flex-col">
+                    <h2>$9,999.00</h2>
+                    <div class="bottom flex-col">
+                        <div class="flex">
+                            <h4>1234</h4>
+                            <h4>1234</h4>
+                            <h4>1234</h4>
+                        </div>
+                        <div class="flex">
+                            <p>expire</p>
+                            <p>12/ <span id="card-years0">_</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex-col">
+                    <p>bank asia</p>
+                    <div class="bottom flex-col">
+                        <h3>4567</h3>
+                        <div id="circles" class="flex">
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass flex flex-nowrap">
+                <div class="left flex-col">
+                    <h2>$9,999.00</h2>
+                    <div class="bottom flex-col">
+                        <div class="flex">
+                            <h4>1234</h4>
+                            <h4>1234</h4>
+                            <h4>1234</h4>
+                        </div>
+                        <div class="flex">
+                            <p>expire</p>
+                            <p>12/ <span id="card-years1">_</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex-col">
+                    <p>bank asia</p>
+                    <div class="bottom flex-col">
+                        <h3>4567</h3>
+                        <div id="circles" class="flex">
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass flex flex-nowrap">
+                <div class="left flex-col">
+                    <h2>$9,999.00</h2>
+                    <div class="bottom flex-col">
+                        <div class="flex">
+                            <h4>1234</h4>
+                            <h4>1234</h4>
+                            <h4>1234</h4>
+                        </div>
+                        <div class="flex">
+                            <p>expire</p>
+                            <p>12/ <span id="card-years2">_</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex-col">
+                    <p>bank asia</p>
+                    <div class="bottom flex-col">
+                        <h3>4567</h3>
+                        <div id="circles" class="flex">
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- map -->
+        <section class="container scroller" id="map-section">
+
+            <section class="content flex-col">
+                <div class="heading-section flex-col">
+                    <h1>get in touch</h1>
+                    <p>we will contact after recive your request</p>
+                </div>
+                <div class="map flex neumo-in">  
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14687.949016811552!2d89.2326924!3d23.0242402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff13558e1cdfbd%3A0x13e0a0f8236fd44!2sMd%20Ezazul%20Hassan!5e0!3m2!1sen!2sbd!4v1674920192336!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+        </section>
+
+        <!-- links -->
+        <section class="scroller links_bg" id="links_section">
+            
+            <!-- <div id="mouse"></div> -->
+
+            <section class="content links flex-col">
+
+                <div class="flex user-input">
+                    <input type="range" name="" id="prange" value="0" title="drag to change color">
+
+                    <button id="theme" class="theme primary-button" title="theme"><span></span></button>
+                </div>
+
+                <div class="flex inside">
+                    <div class="left flex-col">
+                        <div class="logo flex">
+                            <img src="mdezazulhassan2023-logo.png" alt="web developer | md ezazul hassan">
+                            <p>md ezazul hassan</p>
+                        </div>
+                        <p class="pragraph">hi i'm 'web developer | md ezazul hassan' & i'm a freelancer has developed products & brands for start ups all around the world. today i'm a professional developer.</p>
+                        <div class="flex download">
+                            <div class="glass flex">
+                                <div class="left flex">
+                                    <span class="icon clip_text"><i class="fa-brands fa-apple"></i></span>
+                                </div>
+                                <div class="right flex-col">
+                                    <p>download from</p>
+                                    <h2>app store</h2>
+                                </div>
+                            </div>
+
+                            <div class="glass flex">
+                                <div class="left flex">
+                                    <span class="icon clip_text"><i class="fa-brands fa-google-play"></i></span>
+                                </div>
+                                <div class="right flex-col">
+                                    <p>get it from</p>
+                                    <h2>google play</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right all_links flex">
+                        <div class="flex-col">
+                            <span>navigation</span>
+                            <ul class="flex-col link_list">
+                                <li>home</li>
+                                <li>about</li>
+                                <li>services</li>
+                                <li>portfolio</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col">
+                            <span>products</span>
+                            <ul class="flex-col link_list">
+                                <li>web site</li>
+                                <li>web apps</li>
+                                <li>blog</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col">
+                            <span>company</span>
+                            <ul class="flex-col link_list">
+                                <li>seo</li>
+                                <li>assistant</li>
+                                <li>manager</li>
+                                <li>co-founder</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="links_bottom flex">
+                    <div class="flex">
+                        <input
+                        type="email"
+                        name="email"
+                        id="subscribe"
+                        placeholder="abc@gmail.com"
+                        pattern="[A-Za-z0-9]"
+                        autocomplete="email">
+
+                        <button class="primary-button"><a href="http://youtube.com/@mdezazulhassan2023" target="_blank">subscribe <i class="fa-solid fa-bell"></i></a></button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <button class="slide_auto_down primary_circle_button show" id="slide_auto_down">↓</button>
+    <button class="slide_auto_up primary_circle_button " id="slide_auto_up">↑</button>
+    
+    <!-- footer -->
+    <footer class="flex scroller">
+        <p> &copy; 2023 by web developer | <b class="primary-color">md ezazul hassan</b>
+        </p>
+    </footer>
+    
+
+
+    <script src="script.js"></script>
+    
 </body>
 </html>
+
+
+
+
+
+
+
+
+	
+    
