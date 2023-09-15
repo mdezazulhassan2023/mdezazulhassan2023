@@ -142,7 +142,7 @@ setInterval(() => {
 let theme = document.getElementById('theme');
 let time = date.getHours();
 
-if(time >= 18 || time >= 6){
+if(time >= 18 && time >= 6){
   theme.classList.add('active');
 }else{
   theme.classList.remove('active')
